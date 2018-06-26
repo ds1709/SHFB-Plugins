@@ -88,7 +88,7 @@ Using XSLT transformation it can be simplified to next:
 ###### Plug-in usage
 To apply XSLT transformation to your topic source xml you need:
 - Create file with same name as topic source file, but ".xslt" extension (it's your XSLT transformation file).
-- Inclede file in your project in same directory where topic source file located.
+- Include file in your project in same directory where topic source file located.
 - Enable plug-in.
 
 So, it should looks like:
