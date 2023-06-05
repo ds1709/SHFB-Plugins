@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Xml;
-using System.Xml.XPath;
+using System.Xml.Linq;
 using System.Xml.Xsl;
 using SandcastleBuilder.Utils;
 using SandcastleBuilder.Utils.BuildComponent;
@@ -28,9 +28,10 @@ namespace PrebuildXsltTransform
 
         public IEnumerable<ExecutionPoint> ExecutionPoints => executionPoints.Value;
 
-        public string ConfigurePlugIn(SandcastleProject project, string currentConfig) => currentConfig;
+        public string ConfigurePlugIn(SandcastleProject project, string currentConfig)
+            => currentConfig;
 
-        public void Initialize(BuildProcess buildProcess, XPathNavigator configuration)
+        public void Initialize(BuildProcess buildProcess, XElement configuration)
         {
             builder = buildProcess;
 
